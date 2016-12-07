@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('superagent')
-var xml2js  = require()
+var xml2js  = require('xml2js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 // Get data from bus tracker website
 // Call this route from your main JS file
 // on the front end. It'll be an AJAX call.
-app.get('/busses/?', function(req, res, next) {
+router.get('/busses/?', function(req, res, next) {
   // Use the `request` object (Superagent: https://github.com/visionmedia/superagent)
   // to make an API call to CTA to get the data you want
   request
